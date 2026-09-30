@@ -5,6 +5,7 @@ import styles from "./page.module.css"
 import Meditation from "@/lib/Meditation"
 
 import { meditations } from "@/lib/meditations"
+import { formatTagLabel } from "@/lib/Meditation"
 
 import { useState } from "react"
 
@@ -23,21 +24,25 @@ export default function MeditationsPage() {
         <select className={styles.select} value={selectedTag} onChange={handleChange}>
           {tags.map((tag) => (
             <option key={tag} value={tag}>
-              {tag}
+              {formatTagLabel(tag)}
             </option>
           ))}
         </select>
       </div>
       <div className={styles.meditations}>
-        {meditations.map((meditation) => (
-          <Meditation
-            key={meditation.slug}
-            slug={meditation.slug}
-            title={meditation.title}
-            duration={meditation.duration}
-            tags={meditation.tags}
-          />
-        ))}
+        {meditations.map((meditation) => {
+          if (selectedTag === "All Tags" || meditation.tags.includes(selectedTag)) {
+            return (
+              <Meditation
+                key={meditation.slug}
+                slug={meditation.slug}
+                title={meditation.title}
+                duration={meditation.duration}
+                tags={meditation.tags}
+              />
+            )
+          }
+        })}
       </div>
     </div>
   )

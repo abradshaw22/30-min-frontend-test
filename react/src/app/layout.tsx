@@ -1,4 +1,3 @@
-import "normalize.css"
 import "@fontsource/open-sans"
 import "./globals.css"
 
