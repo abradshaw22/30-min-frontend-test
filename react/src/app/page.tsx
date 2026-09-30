@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Home() {
-  return <a href="/meditations">Meditations</a>
+  return <Link href="/meditations">Meditations</Link>
 }
