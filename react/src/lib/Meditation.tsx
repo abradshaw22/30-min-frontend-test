@@ -7,7 +7,7 @@ type Props = {
   tags: string[]
 }
 
-const BASE_VIDEO_URL = "https://coaching.healthygamer.gg/"
+const BASE_VIDEO_URL = "https://coaching.healthygamer.gg"
 
 export function formatTagLabel(tag: string) {
   if (tag.toLowerCase() === "adhd") {
