@@ -1,4 +1,5 @@
 import "@fontsource/open-sans"
+import "@fontsource/open-sans/700.css"
 import "./globals.css"
 
 export default function RootLayout({

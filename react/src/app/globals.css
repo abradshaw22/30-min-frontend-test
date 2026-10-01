@@ -21,7 +21,6 @@
 }
 
 body {
-  text-rendering: geometric-precision;
   background: var(--background);
   color: var(--text);
   padding: 24px;
