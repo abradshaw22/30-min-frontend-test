@@ -1,6 +1,7 @@
 :root {
   --background: #021324;
   --text: white;
+  --brand-primary: #2ED336;
   --anxiety: #9850ff;
   --anxiety-rgb: 152, 80, 255;
   --depression: #067ccc;
@@ -11,6 +12,12 @@
   --adhd-rgb: 255, 102, 114;
   --trauma: #ff8533;
   --trauma-rgb: 255, 133, 51;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 body {
